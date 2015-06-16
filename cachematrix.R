@@ -1,17 +1,17 @@
 ## Functions makeCacheMatrix and cacheSolve store the results
 ## of matrix-inversion calculations, so that these calculations
 ## only need to be performed once.  After the inverse is calculated
-## once, it is stored in a function list so that it is retrieved
+## once, it is stored in a list of functions so that it is retrieved
 ## (rather than calculated) as long as the original matrix
 ## remains unchanged.
 
 ## makeCacheMatrix stores a matrix as a list of 4 functions:
-## Function set() to initialize the matrix by storing
+## 1. Function set() to initialize the matrix by storing
 ##      the full matrix within the list
-## Function setinverse() to calculate the inverse and store it
-## Function get() to return the value of the matrix stored
+## 2. Function setinverse() to calculate the inverse and store it
+## 3. Function get() to return the value of the matrix stored
 ##      within the list
-## Function getinverse() to return an inverse that has been 
+## 4. Function getinverse() to return an inverse that has been 
 ##      calculated previously
 ## Note: if the value of the matrix is changed (using set()),
 ##       the stored value of the inverse is erased and will not
